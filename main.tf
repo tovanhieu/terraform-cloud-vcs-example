@@ -23,5 +23,5 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "ansible_server" {
   ami           = data.aws_ami.ami.id
-  instance_type = "t3.micro"
+  instance_type = "t3.small" // t3.micro -> t3.small
 }
